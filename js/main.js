@@ -86,13 +86,15 @@
         var form = document.getElementById('contact-form');
         if (!form) return;
 
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var originalBtnText = submitBtn ? submitBtn.textContent : 'Send';
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
             var name = $('#name', form).value.trim();
             var email = $('#email', form).value.trim();
             var phone = $('#phone', form).value.trim();
-            var service = $('#service', form).value;
             var message = $('#message', form).value.trim();
 
             if (!name || !email) {
@@ -105,7 +107,12 @@
                 return;
             }
 
-            var subject = 'Quote Request from ' + name + ' \u2014 ' + service;
+            if (submitBtn) {
+                submitBtn.textContent = 'Opening email...';
+                submitBtn.disabled = true;
+            }
+
+            var subject = 'Quote Request from ' + name;
             var bodyLines = [
                 'Hi ' + CONFIG.siteName + ',',
                 '',
@@ -125,7 +132,22 @@
                 '?subject=' + encodeURIComponent(subject) +
                 '&body=' + encodeURIComponent(bodyLines.join('\n'));
 
-            window.location.href = mailto;
+            var link = document.createElement('a');
+            link.href = mailto;
+            link.click();
+
+            setTimeout(function () {
+                if (submitBtn) {
+                    submitBtn.textContent = 'Email opened!';
+                    submitBtn.classList.add('btn-success');
+
+                    setTimeout(function () {
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('btn-success');
+                    }, 2000);
+                }
+            }, 500);
         });
     }
 })();
