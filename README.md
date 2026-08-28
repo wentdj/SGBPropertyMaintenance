@@ -1,6 +1,6 @@
-# SGB Property Care
+# SGB Window Cleaning
 
-A modern, dark-themed website for SGB Property Care — a local window cleaning and property care business. Built as a static site for GitHub Pages, designed to be easy to extend with new services over time.
+A modern, dark-themed website for SGB Window Cleaning — a local window cleaning and property care business. Built as a static site for GitHub Pages, designed to be easy to extend with new services over time.
 
 ## Stack
 

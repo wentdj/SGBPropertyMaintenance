@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SGB Property Care - Stylesheet
+   SGB Window Cleaning - Stylesheet
    Design: Dark modern, charcoal base, teal accent
    ========================================================================== */
 
@@ -250,17 +250,26 @@ p {
 }
 
 .logo img {
-    width: 36px;
-    height: 36px;
+    width: 64px;
+    height: 64px;
     border-radius: 8px;
     object-fit: cover;
-    border: 1px solid var(--line-strong);
 }
 
-.logo em {
-    font-style: normal;
-    color: var(--accent);
+.logo span {
+    color: var(--text);
+    font-weight: 400;
+}
+
+.logo span strong {
     font-weight: 700;
+    margin-right: 0.4rem;
+}
+
+.logo span strong::after {
+    content: '|';
+    margin-left: 0.4rem;
+    font-weight: 400;
 }
 
 .nav {
@@ -431,7 +440,7 @@ p {
 
 .trust-strip {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     align-items: center;
 }
@@ -896,8 +905,8 @@ a.contact-value:hover {
 }
 
 .footer-brand img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     border-radius: 6px;
     object-fit: cover;
 }

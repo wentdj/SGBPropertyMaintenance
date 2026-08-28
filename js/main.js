@@ -3,7 +3,7 @@
 
     const CONFIG = {
         contactEmail: 'hello@sgbpropertycare.co.uk',
-        siteName: 'SGB Property Care'
+        siteName: 'SGB Window Cleaning'
     };
 
     const $ = (sel, ctx) => (ctx || document).querySelector(sel);
@@ -118,7 +118,7 @@
                 'Details:',
                 message || '(none provided)',
                 '',
-                '\u2014 Sent from the SGB Property Care website'
+                '\u2014 Sent from the SGB Window Cleaning website'
             ];
 
             var mailto = 'mailto:' + CONFIG.contactEmail +
