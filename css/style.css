@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SGB Window Cleaning - Stylesheet
+   Cyan Window Cleaning - Stylesheet
    Design: Dark modern, charcoal base, teal accent
    ========================================================================== */
 
@@ -208,17 +208,6 @@ p {
     width: 100%;
 }
 
-.btn-success {
-    background: #10b981 !important;
-    color: #fff !important;
-}
-
-.btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none !important;
-}
-
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -261,10 +250,10 @@ p {
 }
 
 .logo img {
-    width: 64px;
+    width: 180px;
     height: 64px;
-    border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .logo span {
@@ -917,27 +906,11 @@ a.contact-value:hover {
     letter-spacing: -0.01em;
 }
 
-.footer-brand span {
-    color: var(--text);
-    font-weight: 400;
-}
-
-.footer-brand span strong {
-    font-weight: 700;
-    margin-right: 0.4rem;
-}
-
-.footer-brand span strong::after {
-    content: '|';
-    margin-left: 0.4rem;
-    font-weight: 400;
-}
-
 .footer-brand img {
-    width: 64px;
+    width: 180px;
     height: 64px;
-    border-radius: 6px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: left center;
 }
 
 .site-footer p {

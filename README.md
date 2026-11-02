@@ -1,6 +1,6 @@
-# SGB Window Cleaning
+# Cyan Window Cleaning
 
-A modern, dark-themed website for SGB Window Cleaning — a local window cleaning and property care business. Built as a static site for GitHub Pages, designed to be easy to extend with new services over time.
+A modern, dark-themed website for Cyan Window Cleaning — a local window cleaning business. Built as a static site for GitHub Pages, designed to be easy to extend with new services over time.
 
 ## Stack
 
@@ -54,7 +54,7 @@ All the business-specific content is in three places:
 
 | What | Where |
 | --- | --- |
-| Phone, email, areas, owner name | `index.html` (search for `07700 900 123`, `hello@sgbpropertycare.co.uk`, `[Town 1]`, `Sam Bennett`) and the `CONFIG` object in `js/main.js` |
+| Phone, email, areas, owner name | `index.html` (search for `07368 405430`, `steven.bull@cyanwindowcleaning.com`, `[Town 1]`, `Sam Bennett`) and the `CONFIG` object in `js/main.js` |
 | Brand colours | `css/style.css` → `:root` variables (e.g. `--accent`, `--bg`) |
 | Service offerings | `index.html` → `<section class="services">` — each card is self-contained |
 

@@ -2,8 +2,8 @@
     'use strict';
 
     const CONFIG = {
-        contactEmail: 'hello@sgbpropertycare.co.uk',
-        siteName: 'SGB Window Cleaning'
+        contactEmail: 'steven.bull@cyanwindowcleaning.com',
+        siteName: 'Cyan Window Cleaning'
     };
 
     const $ = (sel, ctx) => (ctx || document).querySelector(sel);
@@ -86,9 +86,6 @@
         var form = document.getElementById('contact-form');
         if (!form) return;
 
-        var submitBtn = form.querySelector('button[type="submit"]');
-        var originalBtnText = submitBtn ? submitBtn.textContent : 'Send';
-
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -107,16 +104,11 @@
                 return;
             }
 
-            if (submitBtn) {
-                submitBtn.textContent = 'Opening email...';
-                submitBtn.disabled = true;
-            }
-
             var subject = 'Quote Request from ' + name;
             var bodyLines = [
                 'Hi ' + CONFIG.siteName + ',',
                 '',
-                'I\u2019d like a quote for ' + service + '.',
+                'I\u2019d like a quote for window cleaning.',
                 '',
                 'Name:    ' + name,
                 'Email:   ' + email,
@@ -125,29 +117,14 @@
                 'Details:',
                 message || '(none provided)',
                 '',
-                '\u2014 Sent from the SGB Window Cleaning website'
+                '\u2014 Sent from the Cyan Window Cleaning website'
             ];
 
             var mailto = 'mailto:' + CONFIG.contactEmail +
                 '?subject=' + encodeURIComponent(subject) +
                 '&body=' + encodeURIComponent(bodyLines.join('\n'));
 
-            var link = document.createElement('a');
-            link.href = mailto;
-            link.click();
-
-            setTimeout(function () {
-                if (submitBtn) {
-                    submitBtn.textContent = 'Email opened!';
-                    submitBtn.classList.add('btn-success');
-
-                    setTimeout(function () {
-                        submitBtn.textContent = originalBtnText;
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('btn-success');
-                    }, 2000);
-                }
-            }, 500);
+            window.location.href = mailto;
         });
     }
 })();
